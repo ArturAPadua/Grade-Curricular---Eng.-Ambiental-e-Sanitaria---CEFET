@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grade Curricular - Engenharia Ambiental e Sanitária</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <header>
+        <h1>Grade Curricular - Engenharia Ambiental e Sanitária</h1>
+        <p class="subtitle">
+          Clique em uma disciplina para visualizar seus pré-requisitos,
+          co-requisitos e matérias dependentes
+        </p>
+      </header>
+
+      <!-- Legenda de Cores -->
+      <div class="legenda-container">
+        <div class="legenda-item">
+          <span>Selecionada</span>
+          <div class="legenda-cor" style="background-color: #d9d9d9"></div>
+        </div>
+        <div class="legenda-item">
+          <span>Co-requisito</span>
+          <div class="legenda-cor" style="background-color: #ffd966">0</div>
+        </div>
+        <div class="legenda-item">
+          <span>Pré-requisitos (Anteriores):</span>
+          <div class="legenda-grupo" id="legenda-pre"></div>
+        </div>
+        <div class="legenda-item">
+          <span>Dependentes (Sucessoras):</span>
+          <div class="legenda-grupo" id="legenda-dep"></div>
+        </div>
+      </div>
+
+      <!-- Tabela Gerada Dinamicamente -->
+      <div class="table-wrapper">
+        <table class="tabela-grade">
+          <thead>
+            <tr id="header-periodos"></tr>
+          </thead>
+          <tbody id="corpo-tabela"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
